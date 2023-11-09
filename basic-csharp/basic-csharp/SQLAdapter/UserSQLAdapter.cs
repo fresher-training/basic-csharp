@@ -28,7 +28,16 @@
 
         public int Insert<T>(T item) where T : class, new()
         {
-            throw new NotImplementedException();
+            try
+            {
+                // todo
+                return 1;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return 0;
+            }
         }
 
         public int Update<T>(T item) where T : class, new()
