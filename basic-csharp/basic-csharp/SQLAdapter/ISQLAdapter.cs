@@ -3,7 +3,7 @@
     /// <summary>
     /// SQL Adapter Interface
     /// </summary>
-    public interface ISQLAdapter
+    public interface ISQLAdapter<T> where T : class, new()
     {
         /// <summary>
         /// Connection string
@@ -18,40 +18,35 @@
         /// <summary>
         /// Get list
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        List<T> GetData<T>() where T : class, new();
+        List<T> GetData();
 
         /// <summary>
         /// Get by id
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="id"></param>
         /// <returns></returns>
-        T Get<T>(Guid id) where T : class, new();
+        T Get(Guid id);
 
         /// <summary>
         /// Insert
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="item"></param>
         /// <returns></returns>
-        int Insert<T>(T item) where T : class, new();
+        int Insert(T item);
 
         /// <summary>
         /// Update
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="item"></param>
         /// <returns></returns>
-        int Update<T>(T item) where T : class, new();
+        int Update(T item);
 
         /// <summary>
         /// Delete
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="id"></param>
         /// <returns></returns>
-        int Delete<T>(Guid id)where T : class, new();
+        int Delete(Guid id);
     }
 }
