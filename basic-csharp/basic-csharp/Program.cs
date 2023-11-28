@@ -6,6 +6,7 @@
  * Create order service: create user order - add products from user's cart to order; delete products in cart
  */
 
+using basic_csharp.SQLAdapter;
 using System.Text;
 
 string a = "";
@@ -26,6 +27,8 @@ for (int i = 0; i < list.Count; i++)
 
 Console.WriteLine(list.Where(a=>a == "3").FirstOrDefault());
 
-Console.WriteLine(a);
+UserSQLAdapter.Num1 = 2;
+
+Console.WriteLine(UserSQLAdapter.Num1);
 Console.WriteLine(b.ToString());
 Console.ReadLine();

@@ -4,6 +4,10 @@ namespace basic_csharp.SQLAdapter
 {
     public class UserSQLAdapter : BaseSQLAdapter<User>
     {
+        public const int Num0 = 0;
+        public static int Num1 = 1;
+        public readonly int Num2;
+
         public override string ConnectionString { get; set; }
         public override string TableName { get; set; }
 
@@ -11,12 +15,14 @@ namespace basic_csharp.SQLAdapter
         {
             this.ConnectionString = connectionString;
             this.TableName = "USER";
+            this.Num2 = 1;
         }
 
         public override int Insert(User item)
         {
             // cook data before insert
             item.CreatedDate = DateTimeOffset.UtcNow;
+            this.Num2 = 1;
             return base.Insert(item);
         }
 
