@@ -24,7 +24,6 @@ for (int i = 0; i < list.Count; i++)
         Console.WriteLine(list[i]);
     }
 }
-
 Console.WriteLine(list.Where(a=>a == "3").FirstOrDefault());
 
 UserSQLAdapter.Num1 = 2;
