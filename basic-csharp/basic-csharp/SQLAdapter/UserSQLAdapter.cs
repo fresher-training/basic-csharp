@@ -43,5 +43,10 @@ namespace basic_csharp.SQLAdapter
         {
             // todo
         }
+
+        public void ToDo2()
+        {
+            // Todo2
+        }
     }
 }
