@@ -6,7 +6,7 @@ namespace basic_csharp.SQLAdapter
     {
         public const int Num0 = 0;
         public static int Num1 = 1;
-        public readonly int Num2;
+        public int Num2;
 
         public override string ConnectionString { get; set; }
         public override string TableName { get; set; }
