@@ -38,5 +38,10 @@ namespace basic_csharp.SQLAdapter
             item.LastModifiedDate = DateTimeOffset.UtcNow;
             return base.Update(item);
         }
+
+        public void ToDo1()
+        {
+            // todo
+        }
     }
 }
